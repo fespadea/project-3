@@ -73,7 +73,7 @@ int main(int argc, char **argv){
     double errorResult = error(dataMatrix, ATilde, localn, m, rank);
     if(rank == 0){
         printf("Error: %lf\n", errorResult);
-        double time_in_secs_CUDA = ((double)(start_cycles - end_cycles)) / clock_frequency;
+        double time_in_secs_CUDA = ((double)(end_cycles - start_cycles)) / clock_frequency;
         printf("CUDA Reduce Sum Seconds Taken: %lf\n", time_in_secs_CUDA);
     }
 
